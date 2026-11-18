@@ -80,15 +80,13 @@ body {
 
 header {
 
-    position:absolute;
-
-    top:0;
-
-    left:0;
+    position:relative;
 
     width:100%;
 
-    padding:25px 8%;
+    min-height:88px;
+
+    padding:18px 8%;
 
     display:flex;
 
@@ -96,7 +94,15 @@ header {
 
     align-items:center;
 
-    z-index:10;
+    gap:25px;
+
+    background:linear-gradient(120deg,#fff7fa 0%,#f2eafa 55%,#fff8fb 100%);
+
+    border-bottom:1px solid rgba(190,155,195,.28);
+
+    box-shadow:0 5px 20px rgba(80,55,100,.08);
+
+    z-index:30;
 
 }
 
@@ -117,6 +123,12 @@ header {
 nav {
 
     display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
 
     gap:25px;
 
@@ -152,7 +164,7 @@ nav a:hover {
 
 .hero {
 
-    min-height:100vh;
+    min-height:calc(100vh - 88px);
 
     display:flex;
 
@@ -162,7 +174,7 @@ nav a:hover {
 
     text-align:center;
 
-    padding:120px 20px 70px;
+    padding:75px 20px 70px;
 
     position:relative;
 
@@ -809,11 +821,19 @@ nav a:hover {
 
 .gallery-intro {
 
+    position:relative;
+
+    z-index:5;
+
     text-align:center;
 
-    margin:0 auto 50px;
+    margin:0 auto 155px;
 
-    max-width:650px;
+    max-width:1000px;
+
+    padding:0 15px;
+
+    transform:translateY(-18px);
 
 }
 
@@ -837,13 +857,19 @@ nav a:hover {
 
 .gallery-intro h2 {
 
-    font-family:'Great Vibes',cursive;
+    font-family:'Playfair Display',serif;
 
-    font-size:clamp(3rem,6vw,4.5rem);
+    font-size:clamp(1.8rem,4vw,3.1rem);
 
-    font-weight:400;
+    font-weight:500;
+
+    line-height:1.3;
+
+    letter-spacing:.2px;
 
     color:var(--morado-oscuro);
+
+    margin-bottom:15px;
 
 }
 
@@ -862,6 +888,10 @@ nav a:hover {
 
 
 .gallery-grid {
+
+    position:relative;
+
+    z-index:1;
 
     max-width:1100px;
 
@@ -1303,9 +1333,15 @@ footer {
 @media(max-width:750px) {
 
     header {
-        padding:20px 5%;
+        min-height:auto;
+        padding:18px 5%;
         flex-direction:column;
-        gap:15px;
+        gap:12px;
+    }
+
+    .hero {
+        min-height:calc(100vh - 125px);
+        padding:65px 18px 55px;
     }
 
     nav {
@@ -1335,6 +1371,11 @@ footer {
 
     .dedication-text {
         padding:5px;
+    }
+
+    .gallery-intro {
+        margin-bottom:125px;
+        transform:translateY(-12px);
     }
 
     .gallery-grid {
@@ -1393,21 +1434,33 @@ footer {
     bottom:22px;
     right:22px;
     z-index:1001;
-    padding:12px 22px;
-    border:none;
-    border-radius:30px;
-    background:var(--morado);
-    color:white;
-    font-family:'Poppins',sans-serif;
-    font-size:.8rem;
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid rgba(255,255,255,.9);
+    border-radius:50%;
+    background:#1DB954;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    font-size:1.35rem;
+    font-weight:700;
+    line-height:1;
     cursor:pointer;
-    box-shadow:0 5px 18px rgba(80,55,100,.2);
-    transition:.3s;
+    box-shadow:0 5px 18px rgba(30,100,60,.28);
+    transition:transform .25s,box-shadow .25s,background .25s;
 }
 
 .boton-musica:hover {
-    background:var(--morado-oscuro);
-    transform:translateY(-3px);
+    background:#19a64b;
+    transform:scale(1.08);
+    box-shadow:0 8px 23px rgba(30,100,60,.35);
+}
+
+.boton-musica:focus-visible {
+    outline:3px solid var(--morado-oscuro);
+    outline-offset:4px;
 }
 
 @media(max-width:650px) {
@@ -1415,7 +1468,8 @@ footer {
     .boton-musica {
         bottom:15px;
         right:15px;
-        padding:10px 17px;
+        width:54px;
+        height:54px;
     }
 
 }
@@ -1453,7 +1507,7 @@ footer {
 
 <audio id="musica" src="mp3/cancion.mp3" loop preload="auto"></audio>
 
-<button id="botonMusica" class="boton-musica" type="button">♫ Reproducir música</button>
+<button id="botonMusica" class="boton-musica" type="button" aria-label="Reproducir música" title="Reproducir música">▶</button>
 
 
 
@@ -1845,25 +1899,7 @@ footer {
 
     <div class="gallery-intro">
 
-        <div class="eyebrow">Pequeños grandes recuerdos</div>
-
-
-
-        <h2>Nuestra historia en fotografías</h2>
-
-
-
-        <p>
-
-            Cada fotografía guarda un momento, una sonrisa
-
-            y un pedacito de historia wonita.
-
-            Porque los recuerdos más bonitos merecen
-
-            quedarse para siempre. ♡
-
-        </p>
+        <h2>Para que no olviden lo hermosas que son mis hermanas ❤️</h2>
 
     </div>
 
@@ -2183,7 +2219,7 @@ footer {
 
 
 
-        <h2>Regalo de tu hermanito</h2>
+        <h2>A Gift from Your Little Brother</h2>
 
 
 
@@ -2193,13 +2229,13 @@ footer {
 
         <p>
 
-            Distance may separate cities, the years may bring
+            Distance may separate our cities, the years may lead
 
-            new paths, and life may change our plans, but there
+            us down different paths, and life may change our plans,
 
-            is one thing that will never change: the love that
+            but one thing will never change: the love that keeps
 
-            keeps us together as a family.
+            us together as a family.
 
         </p>
 
@@ -2207,11 +2243,13 @@ footer {
 
         <p>
 
-            Thank you for being part of my life, for your stories,
+            Thank you for being part of my life, for sharing your
 
-            your battles, and all the beautiful memories we still
+            stories, facing your battles, and creating beautiful
 
-            have to create together.
+            memories with me. There are still so many wonderful
+
+            moments waiting for us.
 
         </p>
 
@@ -2259,11 +2297,6 @@ footer {
 
 
 
-<footer>
-
-    Las amo mucho mis lindas y hermosas hermanitas <3
-
-</footer>
 <script>
 
 /* CONTADOR DE CUMPLEAÑOS */
@@ -2345,9 +2378,13 @@ musica.volume = 0.35;
 window.addEventListener("load", () => {
     setTimeout(() => {
         musica.play().then(() => {
-            botonMusica.textContent = "♫ Pausar música";
+            botonMusica.textContent = "Ⅱ";
+            botonMusica.setAttribute("aria-label", "Pausar música");
+            botonMusica.title = "Pausar música";
         }).catch(error => {
-            botonMusica.textContent = "♫ Reproducir música";
+            botonMusica.textContent = "▶";
+            botonMusica.setAttribute("aria-label", "Reproducir música");
+            botonMusica.title = "Reproducir música";
             console.log("El navegador bloqueó la reproducción automática.");
         });
     }, 300);
@@ -2357,13 +2394,17 @@ window.addEventListener("load", () => {
 botonMusica.addEventListener("click", () => {
     if (musica.paused) {
         musica.play().then(() => {
-            botonMusica.textContent = "♫ Pausar música";
+            botonMusica.textContent = "Ⅱ";
+            botonMusica.setAttribute("aria-label", "Pausar música");
+            botonMusica.title = "Pausar música";
         }).catch(error => {
             console.log("No se pudo reproducir la música.", error);
         });
     } else {
         musica.pause();
-        botonMusica.textContent = "♫ Reproducir música";
+        botonMusica.textContent = "▶";
+            botonMusica.setAttribute("aria-label", "Reproducir música");
+            botonMusica.title = "Reproducir música";
     }
 });
 
