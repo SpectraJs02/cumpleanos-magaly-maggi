@@ -1,0 +1,2854 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Magaly & Maggi | Un regalo de su hermanito</title>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+:root {
+
+    --rosa:#f8dce8;
+
+    --rosa-claro:#fff4f8;
+
+    --lila:#e8dff5;
+
+    --morado:#80649e;
+
+    --morado-oscuro:#59446f;
+
+    --texto:#594d60;
+
+}
+
+
+
+* {
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body {
+
+    background:var(--rosa-claro);
+
+    color:var(--texto);
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* NAVEGACIÓN */
+
+
+
+header {
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:25px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:10;
+
+}
+
+
+
+.logo {
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:2rem;
+
+    color:var(--morado-oscuro);
+
+}
+
+
+
+nav {
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+
+
+nav a {
+
+    text-decoration:none;
+
+    color:var(--morado-oscuro);
+
+    font-size:.85rem;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover {
+
+    color:#c078a0;
+
+}
+
+
+
+/* PORTADA */
+
+
+
+.hero {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:120px 20px 70px;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+
+    background:
+    linear-gradient(
+        rgba(255,245,250,.28),
+        rgba(245,230,250,.34)
+    ),
+    url("fotos/cumple.jpg") center center/cover no-repeat;
+}
+
+
+
+.hero-content {
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    animation:aparecer 1.5s ease;
+
+}
+
+
+
+.subtitulo {
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:.75rem;
+    font-weight:500;
+    color:#49345f;
+    margin-bottom:20px;
+    text-shadow:0 1px 5px rgba(255,255,255,.85);
+}
+
+
+
+.hero h1 {
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(4rem,10vw,7.5rem);
+    font-weight:400;
+    line-height:1.15;
+    color:#503765;
+    text-shadow:0 3px 15px rgba(255,255,255,.85);
+}
+
+
+
+.ampersand {
+
+    color:#b76b98;
+
+}
+
+
+
+.hero h2 {
+    font-family:'Playfair Display',serif;
+    font-size:clamp(1.1rem,3vw,1.7rem);
+    font-weight:500;
+    letter-spacing:3px;
+    margin-top:20px;
+    color:#624579;
+    text-shadow:0 1px 8px rgba(255,255,255,.8);
+}
+
+
+
+.hero p {
+    margin:25px auto 35px;
+    max-width:570px;
+    line-height:1.9;
+    font-size:.95rem;
+    font-weight:500;
+    color:#44334f;
+    text-shadow:0 1px 6px rgba(255,255,255,.9);
+}
+
+
+
+.btn {
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    background:var(--morado);
+
+    color:white;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-size:.85rem;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(128,100,158,.2);
+
+}
+
+
+
+.btn:hover {
+
+    background:var(--morado-oscuro);
+
+    transform:translateY(-4px);
+
+}
+
+
+
+.flor {
+
+    position:absolute;
+
+    font-size:2.5rem;
+
+    opacity:.8;
+
+    animation:flotar 5s ease-in-out infinite;
+
+    z-index:1;
+
+}
+
+
+
+.flor1 {
+
+    top:25%;
+
+    right:15%;
+
+}
+
+
+
+.flor2 {
+
+    bottom:25%;
+
+    left:12%;
+
+    animation-delay:1s;
+
+}
+
+
+
+.flor3 {
+
+    top:18%;
+
+    left:10%;
+
+    animation-delay:2s;
+
+}
+
+
+
+.flor4 {
+
+    bottom:15%;
+
+    right:12%;
+
+    animation-delay:1.5s;
+
+}
+
+
+
+/* FLORES FLOTANTES */
+
+
+
+.flores-flotantes {
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:20;
+
+}
+
+
+
+.flor-burbuja {
+
+    position:absolute;
+
+    bottom:-70px;
+
+    font-size:var(--tamano);
+
+    opacity:0;
+
+    animation:subirFlor var(--duracion) linear infinite;
+
+    animation-delay:var(--retraso);
+
+}
+
+
+
+@keyframes subirFlor {
+
+    0% {
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10% {
+
+        opacity:.65;
+
+    }
+
+    85% {
+
+        opacity:.55;
+
+    }
+
+    100% {
+
+        transform:translateY(-115vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/* CONTADOR */
+
+
+
+.countdown-section {
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(180deg,#fff4f8,#f1e8f7);
+
+}
+
+
+
+.countdown-section h2 {
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(1.6rem,4vw,2.3rem);
+
+    color:var(--morado-oscuro);
+
+    font-weight:500;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.countdown-section>p {
+
+    font-size:.9rem;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.countdown {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.time-box {
+
+    width:115px;
+
+    padding:22px 10px;
+
+    background:rgba(255,255,255,.75);
+
+    border:1px solid #e9d9ef;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(128,100,158,.08);
+
+}
+
+
+
+.time-box span {
+
+    display:block;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:2.3rem;
+
+    color:var(--morado);
+
+}
+
+
+
+.time-box small {
+
+    font-size:.65rem;
+
+    letter-spacing:2px;
+
+    color:#9276a8;
+
+}
+
+
+
+.countdown-note {
+
+    margin-top:30px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:2rem;
+
+    color:#b4779d;
+
+}
+
+
+
+/* ENCABEZADOS */
+
+
+
+.section-heading {
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+
+
+.section-heading .eyebrow {
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    color:#b4779d;
+
+    font-size:.7rem;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.section-heading h2 {
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:clamp(3rem,6vw,4.5rem);
+
+    font-weight:400;
+
+    color:var(--morado-oscuro);
+
+}
+
+
+
+.section-heading p {
+
+    font-size:.9rem;
+
+    margin-top:12px;
+
+}
+
+
+
+/* DEDICATORIAS */
+
+
+
+.dedications {
+
+    padding:90px 8%;
+
+    background:linear-gradient(135deg,#fff9fb,#f2eafa);
+
+}
+
+
+
+.dedication-card {
+
+    max-width:1050px;
+
+    margin:0 auto 55px;
+
+    display:grid;
+
+    grid-template-columns:.85fr 1.15fr;
+
+    align-items:center;
+
+    gap:45px;
+
+    padding:30px;
+
+    background:rgba(255,255,255,.78);
+
+    border:1px solid #eee0f0;
+
+    border-radius:25px;
+
+    box-shadow:0 12px 35px rgba(100,75,120,.09);
+
+    transition:.4s;
+
+    animation:aparecer 1s ease;
+
+}
+
+
+
+.dedication-card:hover {
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(100,75,120,.14);
+
+}
+
+
+
+.dedication-card.reverse {
+
+    grid-template-columns:1.15fr .85fr;
+
+}
+
+
+
+.dedication-card.reverse .dedication-image {
+
+    order:2;
+
+}
+
+
+
+.dedication-image {
+
+    position:relative;
+
+}
+
+
+
+.dedication-image::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px -12px -12px 12px;
+
+    border:2px solid #d9c6e7;
+
+    border-radius:20px;
+
+    z-index:0;
+
+}
+
+
+
+.dedication-image img {
+
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    height:390px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    display:block;
+
+}
+
+
+
+.dedication-text {
+
+    padding:15px;
+
+}
+
+
+
+.dedication-text .small-title {
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.68rem;
+
+    color:#b4779d;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.dedication-text h3 {
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3.5rem;
+
+    font-weight:400;
+
+    color:var(--morado-oscuro);
+
+    margin-bottom:18px;
+
+}
+
+
+
+.dedication-text p {
+
+    font-size:.88rem;
+
+    line-height:2;
+
+    margin-bottom:15px;
+
+    text-align:justify;
+
+}
+
+
+
+.dedication-signature {
+
+    font-family:'Great Vibes',cursive;
+
+    color:#b4779d;
+
+    font-size:1.9rem;
+
+    margin-top:20px;
+
+}
+
+
+
+.dedication-divider {
+
+    width:65px;
+
+    height:2px;
+
+    background:#d8b9d7;
+
+    margin:18px 0;
+
+}
+
+
+
+/* GALERÍA */
+
+
+
+.gallery-section {
+
+    padding:90px 7%;
+
+    background:
+
+        radial-gradient(circle at 10% 15%,#f8e2ed,transparent 35%),
+
+        radial-gradient(circle at 90% 85%,#e7dcf3,transparent 35%),
+
+        #fff8fb;
+
+}
+
+
+
+.gallery-intro {
+
+    text-align:center;
+
+    margin:0 auto 50px;
+
+    max-width:650px;
+
+}
+
+
+
+.gallery-intro .eyebrow {
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    color:#b4779d;
+
+    font-size:.7rem;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.gallery-intro h2 {
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:clamp(3rem,6vw,4.5rem);
+
+    font-weight:400;
+
+    color:var(--morado-oscuro);
+
+}
+
+
+
+.gallery-intro p {
+
+    font-size:.88rem;
+
+    line-height:1.8;
+
+    margin-top:12px;
+
+}
+
+
+
+.gallery-grid {
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    grid-auto-rows:190px;
+
+    gap:24px;
+
+    align-items:center;
+
+}
+
+
+
+.gallery-item {
+
+    position:relative;
+
+    padding:10px 10px 35px;
+
+    background:white;
+
+    border-radius:5px;
+
+    box-shadow:0 8px 22px rgba(80,55,100,.16);
+
+    cursor:zoom-in;
+
+    transition:transform .35s,box-shadow .35s;
+
+    overflow:hidden;
+
+}
+
+
+
+.gallery-item img {
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:3px;
+
+    pointer-events:none;
+
+}
+
+
+
+.photo-caption {
+
+    position:absolute;
+
+    bottom:8px;
+
+    left:5px;
+
+    right:5px;
+
+    text-align:center;
+
+    color:#78617f;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:1.35rem;
+
+}
+
+
+
+.gallery-item:nth-child(1),
+
+.gallery-item:nth-child(2),
+
+.gallery-item:nth-child(5) {
+
+    grid-column:span 2;
+
+    grid-row:span 2;
+
+}
+
+
+
+.gallery-item:nth-child(1) {transform:rotate(-3deg);}
+
+.gallery-item:nth-child(2) {transform:rotate(2deg);}
+
+.gallery-item:nth-child(3) {transform:rotate(3deg);}
+
+.gallery-item:nth-child(4) {transform:rotate(-2deg);}
+
+.gallery-item:nth-child(5) {transform:rotate(2deg);}
+
+.gallery-item:nth-child(6) {transform:rotate(-3deg);}
+
+.gallery-item:nth-child(7) {transform:rotate(3deg);}
+
+
+
+.gallery-item:hover {
+
+    transform:scale(1.06) rotate(0deg);
+
+    z-index:3;
+
+    box-shadow:0 18px 35px rgba(80,55,100,.25);
+
+}
+/* VISOR */
+
+.lightbox {
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    background:rgba(35,25,42,.92);
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+}
+
+.lightbox.active {
+    display:flex;
+}
+
+.lightbox img {
+    max-width:90%;
+    max-height:85vh;
+    object-fit:contain;
+    border:8px solid white;
+    border-radius:5px;
+    animation:zoomImagen .3s ease;
+}
+
+.lightbox-close {
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:2.5rem;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+/* ROMPECABEZAS */
+
+.puzzles-section {
+    padding:90px 7%;
+    background:linear-gradient(135deg,#fff4f8,#eee6f6);
+}
+
+.puzzles-intro {
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 60px;
+}
+
+.puzzles-intro .eyebrow {
+    text-transform:uppercase;
+    letter-spacing:4px;
+    color:#b4779d;
+    font-size:.7rem;
+    margin-bottom:12px;
+}
+
+.puzzles-intro h2 {
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(3rem,6vw,4.5rem);
+    font-weight:400;
+    color:var(--morado-oscuro);
+}
+
+.puzzles-intro p {
+    font-size:.9rem;
+    line-height:1.9;
+    margin-top:15px;
+}
+
+.puzzles-grid {
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:25px;
+    align-items:start;
+}
+
+.puzzle-card {
+    min-width:0;
+    padding:25px 18px;
+    background:rgba(255,255,255,.85);
+    border:1px solid #eadced;
+    border-radius:25px;
+    box-shadow:0 12px 35px rgba(100,75,120,.09);
+    text-align:center;
+}
+
+.puzzle-card h3 {
+    font-family:'Great Vibes',cursive;
+    font-size:2.5rem;
+    font-weight:400;
+    color:var(--morado-oscuro);
+    margin-bottom:8px;
+}
+
+.puzzle-description {
+    font-size:.82rem;
+    line-height:1.8;
+    margin-bottom:22px;
+    min-height:65px;
+}
+
+.puzzle-board {
+    width:min(100%,390px);
+    aspect-ratio:1;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:5px;
+    padding:7px;
+    margin:0 auto 22px;
+    background:#d9c6e7;
+    border:1px solid #d9c6e7;
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.puzzle-piece {
+    border:2px solid rgba(255,255,255,.85);
+    border-radius:5px;
+    background-repeat:no-repeat;
+    background-size:300% 300%;
+    cursor:pointer;
+    min-width:0;
+    min-height:0;
+    transition:border-color .2s,transform .2s,filter .2s;
+    touch-action:manipulation;
+}
+
+.puzzle-piece:hover {
+    filter:brightness(1.08);
+}
+
+.puzzle-piece.selected {
+    border:4px solid #b4779d;
+    transform:scale(.94);
+    filter:brightness(1.12);
+}
+
+.puzzle-piece:focus-visible {
+    outline:3px solid var(--morado-oscuro);
+    outline-offset:-4px;
+}
+
+/* FOTO COMPLETA AL RESOLVER */
+
+.puzzle-board.completed {
+    display:block;
+    padding:5px;
+    background:white;
+}
+
+.puzzle-complete-image {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:9px;
+    animation:aparecer .6s ease;
+}
+
+.puzzle-message {
+    min-height:65px;
+    font-family:'Playfair Display',serif;
+    color:var(--morado-oscuro);
+    font-size:.9rem;
+    line-height:1.7;
+    margin:12px auto 18px;
+}
+
+.puzzle-status {
+    display:block;
+    font-size:.77rem;
+    color:#9276a8;
+    margin-bottom:18px;
+}
+
+.puzzle-button {
+    display:inline-block;
+    border:none;
+    padding:12px 27px;
+    background:var(--morado);
+    color:white;
+    border-radius:30px;
+    font-family:'Poppins',sans-serif;
+    font-size:.82rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.puzzle-button:hover {
+    background:var(--morado-oscuro);
+    transform:translateY(-3px);
+}
+
+/* REGALO FINAL */
+
+.final-section {
+    position:relative;
+    overflow:hidden;
+    padding:110px 20px;
+    text-align:center;
+    background:
+        radial-gradient(circle at 15% 20%,#f5dce9,transparent 35%),
+        radial-gradient(circle at 85% 80%,#e4d7f1,transparent 35%),
+        linear-gradient(135deg,#fff7fa,#f1e8f7);
+}
+
+.final-content {
+    max-width:850px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.final-decoration {
+    font-size:2rem;
+    margin-bottom:20px;
+    letter-spacing:12px;
+}
+
+.final-section h2 {
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(3.5rem,8vw,6rem);
+    color:var(--morado-oscuro);
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.final-section h3 {
+    font-family:'Playfair Display',serif;
+    font-size:clamp(1.1rem,3vw,1.5rem);
+    font-weight:400;
+    letter-spacing:3px;
+    color:#b4779d;
+    margin-bottom:35px;
+}
+
+.final-section p {
+    font-size:.95rem;
+    line-height:2;
+    margin:0 auto 22px;
+    max-width:760px;
+}
+
+.final-signature {
+    font-family:'Great Vibes',cursive;
+    font-size:2.5rem;
+    color:#b4779d;
+    margin-top:35px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align:center;
+    padding:25px;
+    background:#f2e7f5;
+    color:var(--morado-oscuro);
+    font-size:.9rem;
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+    from {
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes flotar {
+    0%,100% {
+        transform:translateY(0);
+    }
+    50% {
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes zoomImagen {
+    from {
+        opacity:0;
+        transform:scale(.9);
+    }
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px) {
+
+    .puzzles-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .puzzle-card:last-child {
+        grid-column:1 / -1;
+        max-width:500px;
+        width:100%;
+        justify-self:center;
+    }
+
+    .gallery-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:750px) {
+
+    header {
+        padding:20px 5%;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav {
+        gap:14px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a {
+        font-size:.75rem;
+    }
+
+    .dedication-card,
+    .dedication-card.reverse {
+        grid-template-columns:1fr;
+        gap:30px;
+        padding:22px;
+    }
+
+    .dedication-card.reverse .dedication-image {
+        order:0;
+    }
+
+    .dedication-image img {
+        height:330px;
+    }
+
+    .dedication-text {
+        padding:5px;
+    }
+
+    .gallery-grid {
+        grid-auto-rows:150px;
+        gap:15px;
+    }
+
+}
+
+@media(max-width:650px) {
+
+    .puzzles-grid {
+        grid-template-columns:1fr;
+    }
+
+    .puzzle-card:last-child {
+        grid-column:auto;
+        max-width:none;
+    }
+
+    .puzzle-card {
+        padding:25px 15px;
+    }
+
+    .countdown {
+        gap:10px;
+    }
+
+    .time-box {
+        width:calc(50% - 10px);
+    }
+
+    .gallery-grid {
+        grid-auto-rows:125px;
+        gap:12px;
+    }
+
+    .gallery-item {
+        padding:7px 7px 30px;
+    }
+
+    .photo-caption {
+        font-size:1.1rem;
+    }
+
+    .final-section {
+        padding:80px 20px;
+    }
+
+}
+
+/* BOTÓN DE MÚSICA */
+
+.boton-musica {
+    position:fixed;
+    bottom:22px;
+    right:22px;
+    z-index:1001;
+    padding:12px 22px;
+    border:none;
+    border-radius:30px;
+    background:var(--morado);
+    color:white;
+    font-family:'Poppins',sans-serif;
+    font-size:.8rem;
+    cursor:pointer;
+    box-shadow:0 5px 18px rgba(80,55,100,.2);
+    transition:.3s;
+}
+
+.boton-musica:hover {
+    background:var(--morado-oscuro);
+    transform:translateY(-3px);
+}
+
+@media(max-width:650px) {
+
+    .boton-musica {
+        bottom:15px;
+        right:15px;
+        padding:10px 17px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+    <!-- FLORES FLOTANTES -->
+
+<div class="flores-flotantes" aria-hidden="true">
+
+    <span class="flor-burbuja" style="left:5%;--tamano:25px;--duracion:17s;--retraso:0s">🌷</span>
+
+    <span class="flor-burbuja" style="left:17%;--tamano:30px;--duracion:21s;--retraso:4s">🌸</span>
+
+    <span class="flor-burbuja" style="left:29%;--tamano:22px;--duracion:19s;--retraso:8s">🌹</span>
+
+    <span class="flor-burbuja" style="left:42%;--tamano:28px;--duracion:23s;--retraso:2s">🌺</span>
+
+    <span class="flor-burbuja" style="left:55%;--tamano:24px;--duracion:18s;--retraso:6s">🌷</span>
+
+    <span class="flor-burbuja" style="left:68%;--tamano:32px;--duracion:22s;--retraso:10s">🌼</span>
+
+    <span class="flor-burbuja" style="left:80%;--tamano:25px;--duracion:20s;--retraso:3s">🌸</span>
+
+    <span class="flor-burbuja" style="left:92%;--tamano:29px;--duracion:24s;--retraso:7s">🌹</span>
+
+</div>
+
+
+
+<!-- MÚSICA -->
+
+<audio id="musica" src="mp3/cancion.mp3" loop preload="auto"></audio>
+
+<button id="botonMusica" class="boton-musica" type="button">♫ Reproducir música</button>
+
+
+
+<header>
+
+    <div class="logo">Magaly & Maggi</div>
+
+
+
+    <nav>
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#contador">Contador</a>
+
+        <a href="#dedicatorias">Dedicatorias</a>
+
+        <a href="#galeria">Galería</a>
+
+        <a href="#rompecabezas">Rompecabezas</a>
+
+        <a href="#regalo">Regalo final</a>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+
+<!-- PORTADA -->
+
+
+
+<section class="hero" id="inicio">
+
+    <span class="flor flor1">🌷</span>
+
+    <span class="flor flor2">🌸</span>
+
+    <span class="flor flor3">🌹</span>
+
+    <span class="flor flor4">🌺</span>
+
+
+
+    <div class="hero-content">
+
+        <div class="subtitulo">Una celebración llena de amor</div>
+
+
+
+        <h1>
+
+            Magaly <span class="ampersand">&</span> Maggi
+
+        </h1>
+
+
+
+        <h2>Two Sisters, One Heart</h2>
+
+
+
+        <p>
+
+            Hay personas que hacen que la vida sea más bonita
+
+            simplemente por existir. Hoy celebramos sus vidas,
+
+            sus historias y el amor que nos mantiene unidos.
+
+        </p>
+
+
+
+        <a href="#contador" class="btn">
+
+            Descubrir nuestra sorpresa ♡
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTADOR -->
+
+
+
+<section class="countdown-section" id="contador">
+
+    <h2>Un día especial se acerca ♡</h2>
+
+
+
+    <p>
+
+        La cuenta regresiva para celebrar dos vidas maravillosas.
+
+    </p>
+
+
+
+    <div class="countdown">
+
+        <div class="time-box">
+
+            <span id="days">0</span>
+
+            <small>DÍAS</small>
+
+        </div>
+
+
+
+        <div class="time-box">
+
+            <span id="hours">0</span>
+
+            <small>HORAS</small>
+
+        </div>
+
+
+
+        <div class="time-box">
+
+            <span id="minutes">0</span>
+
+            <small>MINUTOS</small>
+
+        </div>
+
+
+
+        <div class="time-box">
+
+            <span id="seconds">0</span>
+
+            <small>SEGUNDOS</small>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="countdown-note">
+
+        Cada año es más bonito celebrarlas juntas.
+
+    </div>
+
+</section>
+
+
+
+<!-- DEDICATORIAS -->
+
+
+
+<section class="dedications" id="dedicatorias">
+
+
+
+    <div class="section-heading">
+
+        <div class="eyebrow">Palabras desde el corazón</div>
+
+        <h2>Para ustedes, con amor</h2>
+
+        <p>Dos historias diferentes, un mismo amor que nos une.</p>
+
+    </div>
+
+
+
+    <article class="dedication-card">
+
+        <div class="dedication-image">
+
+            <img src="fotos/1.jpeg" alt="Fotografía especial de Magaly">
+
+        </div>
+
+
+
+        <div class="dedication-text">
+
+            <div class="small-title">Una mujer admirable</div>
+
+            <h3>Para Magaly</h3>
+
+            <div class="dedication-divider"></div>
+
+
+
+            <p>
+
+                Hay batallas que ponen a prueba hasta el corazón
+
+                más fuerte, y tú nos has demostrado que la
+
+                valentía no consiste en no tener miedo, sino en
+
+                encontrar fuerzas para seguir adelante incluso
+
+                en los momentos más difíciles.
+
+            </p>
+
+
+
+            <p>
+
+                Has superado una de las pruebas más grandes de
+
+                tu vida, y lo has hecho con una fortaleza que
+
+                siempre admiraremos. Nunca estuviste sola:
+
+                tu familia estuvo a tu lado, animándote,
+
+                acompañándote y recordándote que siempre
+
+                tendrías personas dispuestas a luchar contigo.
+
+            </p>
+
+
+
+            <p>
+
+                Y entre todas esas razones para seguir adelante,
+
+                Miranda fue una luz inmensa. Ella estuvo contigo,
+
+                te cuidó y te sostuvo, demostrando que el amor
+
+                verdadero también se expresa en los pequeños
+
+                actos, en la compañía y en no soltar la mano
+
+                cuando más se necesita.
+
+            </p>
+
+
+
+            <p>
+
+                Que nunca olvides lo fuerte que eres, todo lo
+
+                que has superado y cuánto te queremos.
+
+                Tu historia es un recordatorio de esperanza,
+
+                amor y resiliencia.
+
+            </p>
+
+
+
+            <div class="dedication-signature">Te amo mucho manita ♡</div>
+
+        </div>
+
+    </article>
+
+
+
+    <article class="dedication-card reverse">
+
+        <div class="dedication-image">
+
+            <img src="fotos/2.jpeg" alt="Fotografía especial de Maggi">
+
+        </div>
+
+
+
+        <div class="dedication-text">
+
+            <div class="small-title">Una gran madre y hermana</div>
+
+            <h3>Para Maggi</h3>
+
+            <div class="dedication-divider"></div>
+
+
+
+            <p>
+
+                Hay decisiones que requieren muchísimo valor,
+
+                y tú nos lo demostraste cuando decidiste viajar
+
+                hasta Miami para estar al lado de la mana.
+
+                Quizás la vida no permitió que te quedaras en
+
+                Estados Unidos como esperabas, pero eso jamás
+
+                le quitará mérito a tu valentía ni a todo lo
+
+                que te atreviste a vivir.
+
+            </p>
+
+
+
+            <p>
+
+                Esperamos que guardes esa experiencia en tu
+
+                corazón, porque incluso los caminos que no
+
+                terminan como imaginamos nos dejan recuerdos,
+
+                aprendizajes y momentos que siempre tendrán
+
+                un lugar especial en nuestra historia.
+
+            </p>
+
+
+
+            <p>
+
+                Sabemos cuánto has luchado por tus hijos,
+
+                cuánto has sacrificado y cuántas noches y días
+
+                difíciles has pasado lejos de tu tierra.
+
+                Todo ese esfuerzo nació del amor inmenso de
+
+                una madre que siempre busca lo mejor para
+
+                los suyos.
+
+            </p>
+
+
+
+            <p>
+
+                Ahora regresas al Perú y podrás encontrar
+
+                nuevamente la tranquilidad de estar cerca
+
+                de tu familia. Y tus hijos deben sentirse
+
+                profundamente orgullosos de la tremenda mamá
+
+                que tienen: una mujer valiente, incansable
+
+                y luchadora al cien por ciento.
+
+            </p>
+
+
+
+            <div class="dedication-signature">Te amo mucho manita ♡</div>
+
+        </div>
+
+    </article>
+
+
+
+</section>
+
+
+
+<!-- GALERÍA -->
+
+
+
+<section class="gallery-section" id="galeria">
+
+
+
+    <div class="gallery-intro">
+
+        <div class="eyebrow">Pequeños grandes recuerdos</div>
+
+
+
+        <h2>Nuestra historia en fotografías</h2>
+
+
+
+        <p>
+
+            Cada fotografía guarda un momento, una sonrisa
+
+            y un pedacito de historia wonita.
+
+            Porque los recuerdos más bonitos merecen
+
+            quedarse para siempre. ♡
+
+        </p>
+
+    </div>
+
+
+
+    <div class="gallery-grid">
+
+
+
+        <div class="gallery-item">
+
+            <img src="fotos/maga1.jpeg" alt="Recuerdo de Magaly">
+
+            <span class="photo-caption">Magaly ♡</span>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img src="fotos/magg1.jpeg" alt="Recuerdo de Maggi">
+
+            <span class="photo-caption">Maggi ♡</span>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img src="fotos/maga2.jpeg" alt="Otro recuerdo de Magaly">
+
+            <span class="photo-caption">Momentos especiales</span>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img src="fotos/magg2.jpeg" alt="Otro recuerdo de Maggi">
+
+            <span class="photo-caption">Sonrisas bonitas</span>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img src="fotos/3en1.jpeg" alt="Los tres hermanos juntos en Miami">
+
+            <span class="photo-caption">Juntos en Miami ♡</span>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img src="fotos/maga3.jpeg" alt="Un recuerdo más de Magaly">
+
+            <span class="photo-caption">Para recordar</span>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img src="fotos/magg3.jpeg" alt="Un recuerdo más de Maggi">
+
+            <span class="photo-caption">Para siempre</span>
+
+        </div>
+
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ROMPECABEZAS -->
+
+
+
+<section class="puzzles-section" id="rompecabezas">
+
+
+
+    <div class="puzzles-intro">
+
+        <div class="eyebrow">Un pequeño juego para ustedes</div>
+
+
+
+        <h2>Recuerdos pieza por pieza</h2>
+
+
+
+        <p>
+
+            Cada recuerdo tiene una historia y cada pieza
+
+            forma parte de ella. Armen estas fotografías
+
+            intercambiando las piezas hasta descubrir
+
+            la imagen completa. ♡
+
+        </p>
+
+    </div>
+
+
+
+    <div class="puzzles-grid">
+
+
+
+        <!-- ROMPECABEZAS 1 -->
+
+
+
+        <div class="puzzle-card" id="puzzle1">
+
+            <h3>Magaly & Miranda</h3>
+
+
+
+            <p class="puzzle-description">
+
+                Un vínculo lleno de amor, compañía y fortaleza.
+
+                Porque madre e hija siempre unidas. 💗
+
+            </p>
+
+
+
+            <div class="puzzle-board" id="board1"></div>
+
+
+
+            <div class="puzzle-message" id="message1">
+
+                Cada pieza representa un poquito de ese amor tan grande.
+
+            </div>
+
+
+
+            <span class="puzzle-status" id="status1">
+
+                Selecciona dos piezas para intercambiarlas.
+
+            </span>
+
+
+
+            <button class="puzzle-button" onclick="mezclarPuzzle(1)">
+
+                Mezclar nuevamente ♡
+
+            </button>
+
+
+
+            <div class="puzzle-help">
+
+                Toca una pieza y luego otra para intercambiarlas.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ROMPECABEZAS 2 -->
+
+
+
+        <div class="puzzle-card" id="puzzle2">
+
+            <h3>Maggi & Pablito & Francesca</h3>
+
+
+
+            <p class="puzzle-description">
+
+                Pablito y Francesca: dos grandes razones para
+
+                seguir luchando y que llenan tu corazon. 💜
+
+            </p>
+
+
+
+            <div class="puzzle-board" id="board2"></div>
+
+
+
+            <div class="puzzle-message" id="message2">
+
+                El amor de una mami está presente en cada paso.
+
+            </div>
+
+
+
+            <span class="puzzle-status" id="status2">
+
+                Selecciona dos piezas para intercambiarlas.
+
+            </span>
+
+
+
+            <button class="puzzle-button" onclick="mezclarPuzzle(2)">
+
+                Mezclar nuevamente ♡
+
+            </button>
+
+
+
+            <div class="puzzle-help">
+
+                Toca una pieza y luego otra para intercambiarlas.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ROMPECABEZAS 3 -->
+
+
+
+        <div class="puzzle-card" id="puzzle3">
+
+            <h3>Nuestra Mami</h3>
+
+
+
+            <p class="puzzle-description">
+
+                Dos manas, una historia compartida y un amor
+
+                que siempre tendrá un lugar especial. 🌷
+
+            </p>
+
+
+
+            <div class="puzzle-board" id="board3"></div>
+
+
+
+            <div class="puzzle-message" id="message3">
+
+                Hay recuerdos que se quedan en el corazón para siempre.
+
+                Y nosotros amamos mucho a la mamita no? ;3
+
+            </div>
+
+
+
+            <span class="puzzle-status" id="status3">
+
+                Selecciona dos piezas para intercambiarlas.
+
+            </span>
+
+
+
+            <button class="puzzle-button" onclick="mezclarPuzzle(3)">
+
+                Mezclar nuevamente ♡
+
+            </button>
+
+
+
+            <div class="puzzle-help">
+
+                Toca una pieza y luego otra para intercambiarlas.
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</section>
+
+
+
+<!-- REGALO FINAL -->
+
+
+
+<section class="final-section" id="regalo">
+
+    <div class="final-content">
+
+
+
+        <div class="final-decoration">🌷 🌸 🌹</div>
+
+
+
+        <h2>Regalo de tu hermanito</h2>
+
+
+
+        <h3>Two Sisters, One Heart.</h3>
+
+
+
+        <p>
+
+            Distance may separate cities, the years may bring
+
+            new paths, and life may change our plans, but there
+
+            is one thing that will never change: the love that
+
+            keeps us together as a family.
+
+        </p>
+
+
+
+        <p>
+
+            Thank you for being part of my life, for your stories,
+
+            your battles, and all the beautiful memories we still
+
+            have to create together.
+
+        </p>
+
+
+
+        <div class="final-signature">
+
+              ♡
+
+        </div>
+
+
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- VISOR DE FOTOGRAFÍAS -->
+
+
+
+<div class="lightbox" id="lightbox"
+
+     role="dialog" aria-modal="true"
+
+     aria-label="Fotografía ampliada">
+
+
+
+    <button class="lightbox-close" id="lightboxClose"
+
+            aria-label="Cerrar fotografía">&times;</button>
+
+
+
+    <img src="" alt="Fotografía ampliada" id="lightboxImage">
+
+</div>
+
+
+
+<footer>
+
+    Las amo mucho mis lindas y hermosas hermanitas <3
+
+</footer>
+<script>
+
+/* CONTADOR DE CUMPLEAÑOS */
+
+
+
+function actualizarContador() {
+
+    const ahora = new Date();
+
+
+
+    let cumple = new Date(
+
+        ahora.getFullYear(), 10, 17, 0, 0, 0
+
+    );
+
+
+
+    if (ahora >= cumple) {
+
+        cumple = new Date(
+
+            ahora.getFullYear() + 1, 10, 17, 0, 0, 0
+
+        );
+
+    }
+
+
+
+    const diferencia = cumple - ahora;
+
+
+
+    document.getElementById("days").textContent =
+
+        Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+
+
+    document.getElementById("hours").textContent =
+
+        Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+
+
+
+    document.getElementById("minutes").textContent =
+
+        Math.floor((diferencia / (1000 * 60)) % 60);
+
+
+
+    document.getElementById("seconds").textContent =
+
+        Math.floor((diferencia / 1000) % 60);
+
+}
+
+
+
+actualizarContador();
+
+setInterval(actualizarContador, 1000);
+
+
+
+
+
+/* MÚSICA AUTOMÁTICA Y BOTÓN DE CONTROL */
+
+const musica = document.getElementById("musica");
+const botonMusica = document.getElementById("botonMusica");
+
+musica.volume = 0.35;
+
+// Intentar reproducir automáticamente
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        musica.play().then(() => {
+            botonMusica.textContent = "♫ Pausar música";
+        }).catch(error => {
+            botonMusica.textContent = "♫ Reproducir música";
+            console.log("El navegador bloqueó la reproducción automática.");
+        });
+    }, 300);
+});
+
+// Pausar y reanudar desde el botón
+botonMusica.addEventListener("click", () => {
+    if (musica.paused) {
+        musica.play().then(() => {
+            botonMusica.textContent = "♫ Pausar música";
+        }).catch(error => {
+            console.log("No se pudo reproducir la música.", error);
+        });
+    } else {
+        musica.pause();
+        botonMusica.textContent = "♫ Reproducir música";
+    }
+});
+
+/* GALERÍA: AMPLIAR FOTOGRAFÍAS */
+
+
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImage = document.getElementById("lightboxImage");
+
+const lightboxClose = document.getElementById("lightboxClose");
+
+
+
+document.querySelectorAll(".gallery-item").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        const imagen = item.querySelector("img");
+
+
+
+        lightboxImage.src = imagen.src;
+
+        lightboxImage.alt = imagen.alt;
+
+
+
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+        lightboxClose.focus();
+
+    });
+
+});
+
+
+
+function cerrarFotografia() {
+
+    lightbox.classList.remove("active");
+
+    lightboxImage.src = "";
+
+    document.body.style.overflow = "";
+
+}
+
+
+
+lightboxClose.addEventListener("click", cerrarFotografia);
+
+
+
+lightbox.addEventListener("click", event => {
+
+    if (event.target === lightbox) {
+
+        cerrarFotografia();
+
+    }
+
+});
+
+
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape" && lightbox.classList.contains("active")) {
+
+        cerrarFotografia();
+
+    }
+
+});
+
+
+
+
+
+/* ROMPECABEZAS INTERACTIVOS */
+
+
+
+const puzzles = {
+
+    1: {
+
+        image: "fotos/foto1.jpeg",
+
+        initialMessage: "Cada pieza representa un poquito de ese amor tan grande.",
+
+        successMessage: "¡Lo lograron! Un amor tan bonito siempre encuentra la manera de mantenerse unido. 💗"
+
+    },
+
+
+
+    2: {
+
+        image: "fotos/foto2.jpeg",
+
+        initialMessage: "El amor de una mami está presente en cada paso.",
+
+        successMessage: "¡Fotografía completa! El amor de una mami es uno de los regalos más grandes de la vida. 💜"
+
+    },
+
+
+
+    3: {
+
+        image: "fotos/foto3.jpeg",
+
+        initialMessage: "Hay recuerdos que se quedan en el corazón para siempre.",
+
+        successMessage: "¡NUESTRA MAMI! Un recuerdo que nos une y que siempre llevaremos en el corazón. 🌷"
+
+    }
+
+};
+
+
+
+const estadosPuzzle = {};
+
+
+
+function mezclarArray(array) {
+
+    const resultado = [...array];
+
+
+
+    for (let i = resultado.length - 1; i > 0; i--) {
+
+        const j = Math.floor(Math.random() * (i + 1));
+
+
+
+        [resultado[i], resultado[j]] =
+
+        [resultado[j], resultado[i]];
+
+    }
+
+
+
+    return resultado;
+
+}
+
+
+
+function estaResuelto(piezas) {
+
+    return piezas.every((pieza, indice) => pieza === indice);
+
+}
+
+
+
+function crearPuzzle(id) {
+
+    const config = puzzles[id];
+
+    const tablero = document.getElementById("board" + id);
+
+    const estado = estadosPuzzle[id];
+
+
+
+    tablero.innerHTML = "";
+
+    tablero.classList.remove("completed");
+
+
+
+    estado.piezas.forEach((pieza, posicion) => {
+
+        const boton = document.createElement("button");
+
+
+
+        boton.type = "button";
+
+        boton.className = "puzzle-piece";
+
+
+
+        boton.setAttribute(
+
+            "aria-label",
+
+            "Pieza " + (posicion + 1)
+
+        );
+
+
+
+        const fila = Math.floor(pieza / 3);
+
+        const columna = pieza % 3;
+
+
+
+        const x = columna * 50;
+
+        const y = fila * 50;
+
+
+
+        boton.style.backgroundImage =
+
+            `url("${config.image}")`;
+
+
+
+        boton.style.backgroundPosition =
+
+            `${x}% ${y}%`;
+
+
+
+        boton.addEventListener("click", () => {
+
+            seleccionarPieza(id, posicion);
+
+        });
+
+
+
+        tablero.appendChild(boton);
+
+    });
+
+}
+
+
+
+function mostrarFotoCompleta(id) {
+
+    const tablero = document.getElementById("board" + id);
+
+    const imagen = document.createElement("img");
+
+
+
+    imagen.src = puzzles[id].image;
+
+    imagen.alt = "Fotografía completa del recuerdo";
+
+    imagen.className = "puzzle-complete-image";
+
+
+
+    tablero.innerHTML = "";
+
+    tablero.classList.add("completed");
+
+    tablero.appendChild(imagen);
+
+}
+
+
+
+function seleccionarPieza(id, posicion) {
+
+    const estado = estadosPuzzle[id];
+
+
+
+    if (estado.resuelto) return;
+
+
+
+    const tablero = document.getElementById("board" + id);
+
+    const piezas = tablero.querySelectorAll(".puzzle-piece");
+
+
+
+    if (estado.seleccionada === null) {
+
+        estado.seleccionada = posicion;
+
+
+
+        piezas[posicion].classList.add("selected");
+
+
+
+        document.getElementById("status" + id).textContent =
+
+            "¡Ahora selecciona la segunda pieza!";
+
+
+
+        return;
+
+    }
+
+
+
+    if (estado.seleccionada === posicion) {
+
+        estado.seleccionada = null;
+
+
+
+        piezas[posicion].classList.remove("selected");
+
+
+
+        document.getElementById("status" + id).textContent =
+
+            "Selecciona dos piezas para intercambiarlas.";
+
+
+
+        return;
+
+    }
+
+
+
+    const primera = estado.seleccionada;
+
+    const segunda = posicion;
+
+
+
+    [
+
+        estado.piezas[primera],
+
+        estado.piezas[segunda]
+
+    ] = [
+
+        estado.piezas[segunda],
+
+        estado.piezas[primera]
+
+    ];
+
+
+
+    estado.seleccionada = null;
+
+
+
+    if (estaResuelto(estado.piezas)) {
+
+        estado.resuelto = true;
+
+
+
+        mostrarFotoCompleta(id);
+
+
+
+        document.getElementById("message" + id).textContent =
+
+            puzzles[id].successMessage;
+
+
+
+        document.getElementById("status" + id).textContent =
+
+            "¡Rompecabezas completado! 🎉";
+
+
+
+        return;
+
+    }
+
+
+
+    crearPuzzle(id);
+
+
+
+    document.getElementById("status" + id).textContent =
+
+        "¡Muy bien! Sigue intercambiando las piezas.";
+
+}
+
+
+
+function mezclarPuzzle(id) {
+
+    const estado = estadosPuzzle[id];
+
+
+
+    estado.piezas = mezclarArray(
+
+        [0,1,2,3,4,5,6,7,8]
+
+    );
+
+
+
+    while (estaResuelto(estado.piezas)) {
+
+        estado.piezas = mezclarArray(
+
+            [0,1,2,3,4,5,6,7,8]
+
+        );
+
+    }
+
+
+
+    estado.seleccionada = null;
+
+    estado.resuelto = false;
+
+
+
+    crearPuzzle(id);
+
+
+
+    document.getElementById("message" + id).textContent =
+
+        puzzles[id].initialMessage;
+
+
+
+    document.getElementById("status" + id).textContent =
+
+        "Selecciona dos piezas para intercambiarlas.";
+
+}
+
+
+
+
+
+/* INICIAR LOS TRES TABLEROS */
+
+
+
+Object.keys(puzzles).forEach(id => {
+
+    estadosPuzzle[id] = {
+
+        piezas: mezclarArray([0,1,2,3,4,5,6,7,8]),
+
+        seleccionada: null,
+
+        resuelto: false
+
+    };
+
+
+
+    while (estaResuelto(estadosPuzzle[id].piezas)) {
+
+        estadosPuzzle[id].piezas =
+
+            mezclarArray([0,1,2,3,4,5,6,7,8]);
+
+    }
+
+
+
+    crearPuzzle(id);
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
